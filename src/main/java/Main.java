@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, IOException {
 
-        System.out.print("hola mundo");
+        
         CloseableHttpClient httpClient = HttpClients.createDefault();
         try {
             HttpGet request = new HttpGet("https://swapi.dev/api/people");
