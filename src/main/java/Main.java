@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, IOException {
 
-
+        System.out.println("Prueba");
         CloseableHttpClient httpClient = HttpClients.createDefault();
         try {
             HttpGet request = new HttpGet("https://swapi.dev/api/people");
@@ -29,7 +29,7 @@ public class Main {
                     var result = EntityUtils.toString(entity);
                     ApiResponse<Character> parsedResponse = mapper.readValue(
                             result, mapper.getTypeFactory().constructParametricType(ApiResponse.class, Character.class));
-                    System.out.println("aqui resultados");
+
                     System.out.println(result);
                 }
             } finally {
